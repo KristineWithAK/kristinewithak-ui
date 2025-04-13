@@ -7,18 +7,18 @@
   align-items: center; /* Center children horizontally */
   justify-content: flex-start; /* Align children at the top */
   font-family: 'Montserrat', sans-serif;
-  background-color: global-styles.$light-background;
+  background-color: global-styles.$light-background-primary;
   border-radius: global-styles.$border-radius;
   padding: 1.5rem;
   box-shadow: global-styles.$box-shadow;
   max-width: 400px;
-  color: global-styles.$light-text;
+  color: global-styles.$light-text-primary;
   flex: 1 1 calc(25% - 16px); /* Adjusts the width of each card */
   box-sizing: border-box; /* Ensures padding and border are included in the width */
   transition: box-shadow 0.3s;
 
   &:hover {
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 8px global-styles.$light-background-accent;
   }
 
   h3 {
@@ -35,7 +35,7 @@
 
   strong {
     font-weight: 700;
-    color: global-styles.$light-text;
+    color: global-styles.$light-text-primary;
   }
 
   img {
@@ -45,15 +45,15 @@
   }
 
   @media (prefers-color-scheme: dark) {
-    background-color: global-styles.$dark-background;
-    color: global-styles.$dark-text;
+    background-color: global-styles.$dark-background-primary;
+    color: global-styles.$dark-text-primary;
 
     p {
       color: global-styles.$dark-text-secondary;
     }
 
     strong {
-      color: global-styles.$dark-text;
+      color: global-styles.$dark-text-accent-emerald;
     }
   }
 }

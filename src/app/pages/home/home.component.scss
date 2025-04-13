@@ -5,10 +5,10 @@ html, body, * {
   height: 100%; /* Ensure the body takes the full viewport height */
   overflow: hidden; /* Prevent scrolling */
   padding: 0;
-  background-color: global-styles.$light-background; // Dark mode background
+  background-color: global-styles.$light-background-accent; // Dark mode background
 
   @media (prefers-color-scheme: dark) {
-    background-color: global-styles.$dark-background; // Dark mode background
+    background-color: global-styles.$dark-background-accent; // Dark mode background
   }
 
 }

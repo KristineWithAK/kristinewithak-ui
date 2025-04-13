@@ -6,44 +6,41 @@
   gap: 16px;
   justify-content: center;
   padding: 2rem;
-  //min-height: 100vh; /* Ensures the container covers the viewport height */
 
-  background-color: global-styles.$light-background;
+  background-color: global-styles.$light-background-primary;
 
   @media (prefers-color-scheme: dark) {
-    background-color: global-styles.$dark-background;
+    background-color: global-styles.$dark-background-primary;
   }
 }
 
-h1, p {
+.services-title {
   text-align: center;
-  color: global-styles.$light-text;
-
-  @media (prefers-color-scheme: dark) {
-    color: global-styles.$dark-text;
-  }
-}
-
-h1 {
+  color: global-styles.$light-text-primary;
   font-family: global-styles.$font-family-primary;
   font-size: 2rem;
   margin-bottom: 1rem;
 
   @media (prefers-color-scheme: dark) {
-    color: global-styles.$dark-gold-gradient;
+    color: global-styles.$dark-text-primary;
   }
 }
 
-p {
+
+.services-description {
   font-family: global-styles.$font-family-secondary;
   font-size: 1rem;
   margin: 0.5rem 0;
+  color: global-styles.$light-text-secondary;
+  @media (prefers-color-scheme: dark) {
+    color: global-styles.$dark-text-secondary;
+  }
 
   strong {
-    color: global-styles.$light-gold-gradient;
+    color: global-styles.$light-gold;
 
     @media (prefers-color-scheme: dark) {
-      color: global-styles.$dark-gold-gradient;
+      color: global-styles.$dark-gold;
     }
   }
 

@@ -6,20 +6,20 @@
   align-items: center;
   //padding: 1.5rem;
   border-radius: global-styles.$border-radius;
-  background-color: global-styles.$light-background;
+  background-color: global-styles.$light-card-background-primary;
 
   @media (prefers-color-scheme: dark) {
-    background-color: global-styles.$dark-background;
+    background-color: global-styles.$dark-card-background-primary;
   }
 
-  h2 {
+  .service-category {
     font-family: global-styles.$font-family-primary;
     font-size: 1.5rem;
     //margin-bottom: 1rem;
-    color: global-styles.$light-gold-gradient;
+    color: global-styles.$light-pink;
 
     @media (prefers-color-scheme: dark) {
-      color: global-styles.$dark-gold-gradient;
+      color: global-styles.$dark-gold;
     }
   }
 
@@ -40,11 +40,11 @@
     margin-bottom: 1rem;
     padding: 1rem;
     border-radius: global-styles.$border-radius;
-    background-color: global-styles.$light-background;
+    background-color: global-styles.$light-card-background-secondary;
     box-shadow: global-styles.$box-shadow;
 
     @media (prefers-color-scheme: dark) {
-      background-color: global-styles.$dark-background;
+      background-color: global-styles.$dark-card-background-secondary;
       box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Adjust for dark mode */
     }
 
@@ -57,32 +57,32 @@
       }
     }
 
-    h3 {
+    .service-name {
       font-family: global-styles.$font-family-secondary;
       font-size: 1.25rem;
       margin-bottom: 0.5rem;
-      color: global-styles.$light-text-secondary;
+      color: global-styles.$light-rose;
+
+      @media (prefers-color-scheme: dark) {
+        color: global-styles.$dark-text-accent-pink;
+      }
+    }
+
+    .service-description {
+      font-family: global-styles.$font-family-secondary;
+      margin: 0.25rem 0;
+      color: global-styles.$light-text-primary;
 
       @media (prefers-color-scheme: dark) {
         color: global-styles.$dark-text-secondary;
       }
     }
 
-    p {
-      font-family: global-styles.$font-family-secondary;
-      margin: 0.25rem 0;
-      color: global-styles.$light-text;
+    .service-price {
+      color: global-styles.$light-text-accent-emerald;
 
       @media (prefers-color-scheme: dark) {
-        color: global-styles.$dark-text;
-      }
-    }
-
-    strong {
-      color: global-styles.$light-gold-gradient;
-
-      @media (prefers-color-scheme: dark) {
-        color: global-styles.$dark-gold-gradient;
+        color: global-styles.$dark-text-accent-emerald;
       }
     }
   }

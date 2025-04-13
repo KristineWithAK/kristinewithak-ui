@@ -1,59 +1,111 @@
 // Updated color variables for light and dark modes
-$light-background: #FFFFFF; // White background
-$light-text: #000000; // Black text
-$light-text-secondary: #333333; // Dark gray for secondary text in light mode
-$light-gold-gradient: #E2AE05; // Gold to white gradient for light mode
+$light-gold: #C59D26;
+$light-emerald: #0F4D3C;
+$light-pink: #F6D6D6;
+$light-charcoal: #2B2B2B;
+$light-champagn: #D8CFC7;
+$light-rose: #AD6C72;
 
-$dark-background: #000000; // Dark background
-$dark-text: #FFFFFF; // White text for dark mode
-$dark-text-secondary: #CCCCCC; // Light gray for secondary text in dark mode
-$dark-gold-gradient: #E2AE05; // Gold to dark gray gradient for dark mode
+$light-background-primary: #FAF9F6;
+$light-background-accent: #F9E4E4;
+$light-card-background-primary: #F1EEE8;
+$light-card-background-secondary: #E4E0DA;
+$light-divider-color: #D9D5CD;
+$light-text-primary: #1A1A1A;
+$light-text-secondary: #4C4C4C;
+$light-text-accent-gold: $light-gold;
+$light-text-accent-emerald: $light-emerald;
+$light-text-accent-pink: #D97C84;
+$light-text-disabled: #A6A6A6;
+$light-headers-priamary: $light-emerald;
+$light-headers-secondary: $light-charcoal;
+$light-buttons-primary: $light-gold;
+$light-buttons-secondary: $light-pink;
+
+$dark-gold: #E6C200;
+$dark-emerald: #3AB89F;
+$dark-pink: #F29CA0;
+$dark-charcoal: #1A1A1A;
+$dark-champagn: #B76E79;
+
+$dark-background-primary: #000000;
+$dark-background-accent: #2A1C1C;
+$dark-card-background-primary: #121212;
+$dark-card-background-secondary: #1E1E1E;
+$dark-divider-color: #2E2E2E;
+$dark-text-primary: #F2F2F2;
+$dark-text-secondary: #B0B0B0;
+$dark-text-accent-gold: $dark-gold;
+$dark-text-accent-emerald: $light-emerald;
+$dark-text-accent-pink: $dark-pink;
+$dark-text-disabled: #666666;
+$dark-headers-priamary: $light-emerald;
+$dark-headers-secondary: $light-charcoal;
+$dark-buttons-primary: $light-gold;
+$dark-buttons-secondary: $light-pink;
 
 $border-radius: 12px;
 $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-$font-family-primary: 'Magnolia Sky', cursive;  // 'Magnolia Sky', 'Cursive', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; // For "The Goddess Within"
+$font-family-primary: 'Magnolia Sky', cursive; // 'Magnolia Sky', 'Cursive', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; // For "The Goddess Within"
 $font-family-secondary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; // For "Luxury Spa Products"
 
 // Global styles
-html, body {
+html {
   font-family: $font-family-secondary;
-  background-color: $light-background !important;
-  color: $light-text !important;
+  background-color: $light-background-primary;
+  color: $light-text-primary;
   height: 100%;
   margin: 0;
   padding: 0;
-  transition: background-color 0.3s, color 0.3s;
+  //transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+  font-family: $font-family-secondary;
+  background-color: $light-background-accent;
+  color: $light-text-primary;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  //transition: background-color 0.3s, color 0.3s;
 }
 
 // Dark mode styles
 @media (prefers-color-scheme: dark) {
   html, body {
-    background-color: $dark-background !important;
-    color: $dark-text !important;
+    background-color: $dark-background-primary;
+    color: $dark-text-primary;
   }
 }
 
 // Example usage of the gold gradient
 h1 {
   font-family: $font-family-primary;
-  color: $light-gold-gradient !important;
+  color: $light-emerald;
   text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
 
   @media (prefers-color-scheme: dark) {
-    color: $dark-gold-gradient !important;
+    color: $dark-emerald;
   }
 }
-
+h2, h3 {
+  font-weight: 600;
+}
 h3, h2, p {
   font-family: $font-family-secondary;
-  color: $light-text-secondary !important;
+  color: $light-text-secondary;
   text-align: center;
 
   @media (prefers-color-scheme: dark) {
-    color: $dark-text-secondary !important;
+    color: $dark-text-secondary;
   }
 }
-
+a:hover, button:hover {
+  transition: transform 0.2s ease;
+  transform: scale(1.03);
+}
 #app-root {
   display: flex;
   flex-direction: column;

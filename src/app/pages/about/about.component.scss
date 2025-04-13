@@ -11,11 +11,11 @@
   h1 {
     font-size: 3rem;
     font-family: global-styles.$font-family-primary;
-    color: global-styles.$light-gold-gradient;
+    color: global-styles.$light-gold;
     margin-bottom: 0.5rem;
 
     @media (prefers-color-scheme: dark) {
-      color: global-styles.$dark-gold-gradient;
+      color: global-styles.$dark-gold;
     }
   }
 
@@ -36,8 +36,8 @@
 // Hero Section (add hero image via component logic or style it as background)
 .hero-section {
   width: 100%;
-  height: 400px;
-  background: url('/assets/kristine-hero.jpg') center/cover no-repeat;
+  height: 1000px;
+  background: url('/images/kristinewithak/kristine-with-a-k.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,7 +46,7 @@
   margin-bottom: 2rem;
 
   .hero-text {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: global-styles.$light-background-accent;
     padding: 1.5rem 2rem;
     border-radius: global-styles.$border-radius;
     color: #fff;
@@ -56,8 +56,16 @@
   }
 }
 
+.about-section:nth-of-type(even) h2 {
+  text-align: left;
+}
+
+.about-section:nth-of-type(odd) h2 {
+  text-align: right;
+}
+
 .about-section {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: global-styles.$light-card-background-primary;
   border-radius: global-styles.$border-radius;
   box-shadow: global-styles.$box-shadow;
   padding: 2rem;
@@ -72,21 +80,20 @@
   }
 
   @media (prefers-color-scheme: dark) {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: global-styles.$dark-card-background-primary;
   }
 
   h2 {
     font-size: 1.8rem;
     font-weight: bold;
-    color: global-styles.$light-gold-gradient;
+    color: global-styles.$light-gold;
     margin-bottom: 1rem;
     text-align: left;
 
     @media (prefers-color-scheme: dark) {
-      color: global-styles.$dark-gold-gradient;
+      color: global-styles.$dark-gold;
     }
   }
-
   p {
     font-size: 1.1rem;
     line-height: 1.8;
@@ -98,19 +105,19 @@
     }
 
     strong {
-      color: global-styles.$light-text;
+      color: global-styles.$light-text-accent-pink;
 
       @media (prefers-color-scheme: dark) {
-        color: global-styles.$dark-text;
+        color: global-styles.$dark-text-accent-pink;
       }
     }
 
     em {
       font-style: italic;
-      color: global-styles.$light-gold-gradient;
+      color: global-styles.$light-text-accent-gold;
 
       @media (prefers-color-scheme: dark) {
-        color: global-styles.$dark-gold-gradient;
+        color: global-styles.$dark-text-accent-gold;
       }
     }
   }
@@ -140,9 +147,9 @@
   text-align: center;
   margin: 3rem auto 1rem;
   max-width: 700px;
-  color: global-styles.$light-text;
+  color: global-styles.$light-text-primary;
 
   @media (prefers-color-scheme: dark) {
-    color: global-styles.$dark-text;
+    color: global-styles.$dark-text-primary;
   }
 }
