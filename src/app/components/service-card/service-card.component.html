@@ -1,0 +1,10 @@
+<div class="service-card">
+  <h2>{{ services.category }}</h2>
+  <div class="service-items">
+    <div class="service-item" *ngFor="let item of services.serviceItems">
+      <h3>{{ item.name }}</h3>
+      <p>{{ item.description }}</p>
+      <p><strong>{{ item.price }}</strong></p>
+    </div>
+  </div>
+</div>

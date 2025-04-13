@@ -1,0 +1,90 @@
+@use 'styles' as global-styles; // Import global styles
+
+// Additional variables specific to the navbar
+$hover-decoration: underline;
+$breakpoint-mobile: 768px;
+
+nav {
+  background-color: global-styles.$light-background; // Inherit global background
+  color: global-styles.$light-text; // Inherit global text color
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: global-styles.$border-radius; // Inherit global border radius
+  box-shadow: global-styles.$box-shadow; // Inherit global box shadow
+  backdrop-filter: blur(10px); // iOS-style blur effect
+
+  @media (prefers-color-scheme: dark) {
+    background-color: global-styles.$dark-background; // Use dark background
+    color: global-styles.$dark-text; // Use dark text color
+  }
+
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: inherit; // Use inherited text color
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: inherit; // Use inherited border radius
+    padding: 0.5rem;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin-left: auto; // Right-align the navbar
+
+    li {
+      a {
+        color: inherit; // Use inherited text color
+        text-decoration: none;
+        font-family: global-styles.$font-family-secondary; // Inherit global font family
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: inherit; // Use inherited border radius
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+          text-decoration: $hover-decoration;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    .menu-toggle {
+      display: block;
+    }
+
+    ul {
+      position: fixed;
+      top: 4rem; // Adjust to ensure it starts below the menu-toggle
+      left: 0;
+      height: auto; // Adjust height to fit content
+      max-height: calc(100vh - 4rem); // Prevent overflow beyond the viewport
+      width: max-content; // Dynamically adjust width to the largest menu item
+      background-color: global-styles.$light-background; // Sidebar background
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+      box-shadow: global-styles.$box-shadow;
+      transform: translateX(-100%); // Hidden by default
+      transition: transform 0.3s ease-in-out;
+      z-index: 999;
+
+      &.collapsed {
+        transform: translateX(0); // Slide in when toggled
+      }
+      @media (prefers-color-scheme: dark) {
+        background-color: global-styles.$dark-background; // Dark mode background
+      }
+
+    }
+  }
+}

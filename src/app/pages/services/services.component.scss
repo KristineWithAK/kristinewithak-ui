@@ -1,0 +1,58 @@
+@use 'styles' as global-styles;
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  padding: 2rem;
+  //min-height: 100vh; /* Ensures the container covers the viewport height */
+
+  background-color: global-styles.$light-background;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: global-styles.$dark-background;
+  }
+}
+
+h1, p {
+  text-align: center;
+  color: global-styles.$light-text;
+
+  @media (prefers-color-scheme: dark) {
+    color: global-styles.$dark-text;
+  }
+}
+
+h1 {
+  font-family: global-styles.$font-family-primary;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+
+  @media (prefers-color-scheme: dark) {
+    color: global-styles.$dark-gold-gradient;
+  }
+}
+
+p {
+  font-family: global-styles.$font-family-secondary;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+
+  strong {
+    color: global-styles.$light-gold-gradient;
+
+    @media (prefers-color-scheme: dark) {
+      color: global-styles.$dark-gold-gradient;
+    }
+  }
+
+  a {
+    color: global-styles.$light-text-secondary;
+    text-decoration: underline;
+
+    @media (prefers-color-scheme: dark) {
+      color: global-styles.$dark-text-secondary;
+    }
+  }
+}

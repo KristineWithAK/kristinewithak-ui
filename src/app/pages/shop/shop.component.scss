@@ -1,0 +1,17 @@
+@use 'styles' as global-styles; // Import global styles
+
+.shop-banner {
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping to the next line */
+  gap: 16px; /* Adds spacing between items */
+  justify-content: center; /* Centers the items horizontally */
+}

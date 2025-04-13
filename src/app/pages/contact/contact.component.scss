@@ -1,0 +1,99 @@
+@use 'styles' as global-styles;
+
+.contact-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: global-styles.$light-gold-gradient;
+    font-family: global-styles.$font-family-primary;
+
+
+    @media (prefers-color-scheme: dark) {
+      color: global-styles.$dark-gold-gradient;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    color: global-styles.$light-text-secondary;
+    margin-bottom: 1.5rem;
+    font-family: global-styles.$font-family-secondary;
+
+
+    @media (prefers-color-scheme: dark) {
+      color: global-styles.$dark-text-secondary;
+    }
+  }
+
+  .contact-info,
+  .social-section,
+  .contact-form-placeholder {
+    margin: 2rem 0;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: global-styles.$light-text-secondary;
+    font-family: global-styles.$font-family-primary;
+
+
+    @media (prefers-color-scheme: dark) {
+      color: global-styles.$dark-text-secondary;
+    }
+  }
+
+  a {
+    color: global-styles.$light-gold-gradient;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: global-styles.$font-family-secondary;
+
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      color: global-styles.$dark-gold-gradient;
+    }
+  }
+
+  .contact-footer {
+    margin-top: 3rem;
+    font-style: italic;
+    color: global-styles.$light-text-secondary;
+
+    @media (prefers-color-scheme: dark) {
+      color: global-styles.$dark-text-secondary;
+    }
+  }
+}
+
+.social-media-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  a {
+    display: inline-block;
+
+    img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+
+      &:hover {
+        transform: scale(1.15);
+        filter: brightness(1.2);
+      }
+    }
+  }
+}

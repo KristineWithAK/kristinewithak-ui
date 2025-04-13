@@ -1,0 +1,148 @@
+@use 'styles' as global-styles;
+
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 3rem;
+    font-family: global-styles.$font-family-primary;
+    color: global-styles.$light-gold-gradient;
+    margin-bottom: 0.5rem;
+
+    @media (prefers-color-scheme: dark) {
+      color: global-styles.$dark-gold-gradient;
+    }
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    color: global-styles.$light-text-secondary;
+    text-align: center;
+    font-style: italic;
+    max-width: 700px;
+    margin-bottom: 2.5rem;
+
+    @media (prefers-color-scheme: dark) {
+      color: global-styles.$dark-text-secondary;
+    }
+  }
+}
+
+// Hero Section (add hero image via component logic or style it as background)
+.hero-section {
+  width: 100%;
+  height: 400px;
+  background: url('/assets/kristine-hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: global-styles.$border-radius;
+  box-shadow: global-styles.$box-shadow;
+  margin-bottom: 2rem;
+
+  .hero-text {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1.5rem 2rem;
+    border-radius: global-styles.$border-radius;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+.about-section {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: global-styles.$border-radius;
+  box-shadow: global-styles.$box-shadow;
+  padding: 2rem;
+  margin: 2rem 0;
+  width: 100%;
+  max-width: 900px;
+  transition: transform 0.3s ease;
+  text-align: left;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: global-styles.$light-gold-gradient;
+    margin-bottom: 1rem;
+    text-align: left;
+
+    @media (prefers-color-scheme: dark) {
+      color: global-styles.$dark-gold-gradient;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-family: global-styles.$font-family-secondary;
+    color: global-styles.$light-text-secondary;
+
+    @media (prefers-color-scheme: dark) {
+      color: global-styles.$dark-text-secondary;
+    }
+
+    strong {
+      color: global-styles.$light-text;
+
+      @media (prefers-color-scheme: dark) {
+        color: global-styles.$dark-text;
+      }
+    }
+
+    em {
+      font-style: italic;
+      color: global-styles.$light-gold-gradient;
+
+      @media (prefers-color-scheme: dark) {
+        color: global-styles.$dark-gold-gradient;
+      }
+    }
+  }
+}
+
+// Optional icon sections or image features
+.icon-feature {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1rem;
+  }
+}
+
+.final-quote {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 3rem auto 1rem;
+  max-width: 700px;
+  color: global-styles.$light-text;
+
+  @media (prefers-color-scheme: dark) {
+    color: global-styles.$dark-text;
+  }
+}

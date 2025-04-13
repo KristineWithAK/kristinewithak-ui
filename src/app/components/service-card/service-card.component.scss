@@ -1,0 +1,89 @@
+@use 'styles' as global-styles;
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //padding: 1.5rem;
+  border-radius: global-styles.$border-radius;
+  background-color: global-styles.$light-background;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: global-styles.$dark-background;
+  }
+
+  h2 {
+    font-family: global-styles.$font-family-primary;
+    font-size: 1.5rem;
+    //margin-bottom: 1rem;
+    color: global-styles.$light-gold-gradient;
+
+    @media (prefers-color-scheme: dark) {
+      color: global-styles.$dark-gold-gradient;
+    }
+  }
+
+  .service-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Controls spacing between items */
+    justify-content: center; /* Centers items horizontally */
+    align-items: flex-start; /* Prevents extra spacing between rows */
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .service-item {
+    flex: 1 1 calc(33.333% - 16px);
+    min-height: calc(33.333% - 16px); /* Ensures the container covers the viewport height */
+    max-width: calc(33.333% - 16px);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: global-styles.$border-radius;
+    background-color: global-styles.$light-background;
+    box-shadow: global-styles.$box-shadow;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: global-styles.$dark-background;
+      box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Adjust for dark mode */
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+
+      @media (prefers-color-scheme: dark) {
+        box-shadow: 0 6px 10px rgba(255, 255, 255, 0.15);
+      }
+    }
+
+    h3 {
+      font-family: global-styles.$font-family-secondary;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: global-styles.$light-text-secondary;
+
+      @media (prefers-color-scheme: dark) {
+        color: global-styles.$dark-text-secondary;
+      }
+    }
+
+    p {
+      font-family: global-styles.$font-family-secondary;
+      margin: 0.25rem 0;
+      color: global-styles.$light-text;
+
+      @media (prefers-color-scheme: dark) {
+        color: global-styles.$dark-text;
+      }
+    }
+
+    strong {
+      color: global-styles.$light-gold-gradient;
+
+      @media (prefers-color-scheme: dark) {
+        color: global-styles.$dark-gold-gradient;
+      }
+    }
+  }
+}

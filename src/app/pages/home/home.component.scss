@@ -1,0 +1,33 @@
+@use 'styles' as global-styles; // Import global styles
+
+html, body, * {
+  margin: 0; /* Remove default margin */
+  height: 100%; /* Ensure the body takes the full viewport height */
+  overflow: hidden; /* Prevent scrolling */
+  padding: 0;
+  background-color: global-styles.$light-background; // Dark mode background
+
+  @media (prefers-color-scheme: dark) {
+    background-color: global-styles.$dark-background; // Dark mode background
+  }
+
+}
+
+.kristine-with-a-k {
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+  display: flex; /* Center the image if needed */
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: auto; /* Maintain the image's intrinsic width */
+  height: auto; /* Maintain the image's intrinsic height */
+  max-width: 100%; /* Ensure the image doesn't overflow horizontally */
+  max-height: 100%; /* Ensure the image doesn't overflow vertically */
+  object-fit: contain; /* Preserve the aspect ratio */
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+}

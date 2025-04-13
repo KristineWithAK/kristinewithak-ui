@@ -1,0 +1,59 @@
+@use 'styles' as global-styles; // Import global styles
+
+
+.product-card {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  justify-content: flex-start; /* Align children at the top */
+  font-family: 'Montserrat', sans-serif;
+  background-color: global-styles.$light-background;
+  border-radius: global-styles.$border-radius;
+  padding: 1.5rem;
+  box-shadow: global-styles.$box-shadow;
+  max-width: 400px;
+  color: global-styles.$light-text;
+  flex: 1 1 calc(25% - 16px); /* Adjusts the width of each card */
+  box-sizing: border-box; /* Ensures padding and border are included in the width */
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  h3 {
+    font-family: 'Magnolia Sky', cursive;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    color: global-styles.$light-text-secondary;
+    margin-bottom: 1rem;
+  }
+
+  strong {
+    font-weight: 700;
+    color: global-styles.$light-text;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: global-styles.$dark-background;
+    color: global-styles.$dark-text;
+
+    p {
+      color: global-styles.$dark-text-secondary;
+    }
+
+    strong {
+      color: global-styles.$dark-text;
+    }
+  }
+}

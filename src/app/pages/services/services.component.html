@@ -1,0 +1,13 @@
+  <h1>✨ Services That Make You <em>Stand Out</em> ✨</h1>
+  <p>
+    Whether you're planning an intimate gathering or launching your brand in style, we've got the magic to make it unforgettable.
+    From on-the-ground event expertise to bold, branded marketing that turns heads—this is where your vision comes to life.
+  </p>
+  <div class="services">
+  <app-service-card
+    *ngFor="let service of servicePackages"
+    [services]="service">
+  </app-service-card>
+  </div>
+  <p><strong>🎯 Custom packages available</strong> – Let’s make something that’s uniquely <em>you</em>.</p>
+  <p>📩 <strong>Get the full scoop:</strong> <a href="mailto:pricing@kristinewithak.com">pricing&#64;kristinewithak.com</a></p>

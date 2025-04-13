@@ -1,0 +1,14 @@
+<nav>
+
+  <button (click)="toggleMenu()" class="menu-toggle">
+    &#9776; <!-- Hamburger icon -->
+  </button>
+  <ul [class.collapsed]="isMenuCollapsed">
+    <li><a routerLink="/" (click)="toggleMenu()">Home</a></li>
+    <li><a routerLink="/about" (click)="toggleMenu()">About</a></li>
+    <li><a routerLink="/contact" (click)="toggleMenu()">Contact</a></li>
+    <li><a routerLink="/shop" (click)="toggleMenu()">Shop</a></li>
+    <li><a routerLink="/services" (click)="toggleMenu()">Services</a></li>
+  </ul>
+</nav>
+
